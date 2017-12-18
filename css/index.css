@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+/* basic selectors */
+/*
+h1 {
+    color: red;
+}
+*/
+/* selector for all paragraphs */
+/*
+p {
+    color: green;
+}
+*/
+/* selector for id */
+/*
+#selected {
+    color: brown;
+}
+*/
+/* selector for class */
+/*
+.yellow-paragraph {
+    color: yellow;
+}
+*/
+
+
+/*комбінатори*/
+/* шукати у тегу header всі параграфи і надати їм жовтий колір*/
+/* header p {
+    color:  yellow
+}
+*/
+/* 
+body {
+    border: 1px solid black;
+}
+*/
+
+/* тільки дочірні до хедера,
+nov, який в хедері і має в собі р...до нього не застосовується*/
+header > p
+{
+    color: yellow;
+    font-family: Arial, sans-serif;
+}
+
+/* параграфи які ідуть після хедера будуть оранжеві*/
+header ~ p
+{
+    color: rgb(143, 168, 104);
+    font-family: Pangolin;
+}
+/*якщо хочемо, щоб один параграф, який йде після хедера набув певного кольору*/
+header + p
+{
+    color: grey;
+}
+
+/*selector по атрибуту*/
+/* підсвітити зеленим ті лінки, які https */
+a[href^="https"]
+{
+    color: #c2f442;
+}
+
+/*Псевдоелементи та псевдокласи*/
+
+/*Псевдоелементи селектори які направлені наприклад
+тільки на першу літеру елемента*/
+/*список псевдоелементів
+::after
+::before
+::first-letter
+::first-line
+::selection
+::backdrop
+*/
+/*перша літера кожного параграфа стане іншого кольору*/
+/*
+p::first-letter
+{
+    color: #71f77c;
+}
+*/
+/*обрати пусте місце перед елементом*/
+p::before
+{
+    content: "<";
+    color: red;
+}
+
+/*обрати пусте місце після елемента*/
+p::after
+{
+    content:">";
+    color: aqua;
+}
+
+/*псевдоклас*/
+/*буде стрибати.*/
+/*щоб не стрибало потрібно поставити рамку,*/
+/*яка буде завжди, але невидима*/
+p:hover
+{
+    border: 1px solid red;
+}
+p 
+{
+    border: 1px solid white;
+}
+/*колір відвіданого лінка*/
+a:visited
+{
+    color: violet;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
